@@ -61,7 +61,7 @@ class WP_Thumb_Background_Fill {
 		// Check if we are padding vertically or horizontally
 		if ( $current_size['width'] != $size['width'] ) {
 
-			$colorToPaint = imagecolorallocatealpha( $new_image, substr( $colors['left'], 0, 3 ), substr( $colors['left'], 3, 3 ), substr( $colors['left'], 6, 3 ), substr( $colors['left'], 9, 3 ) );
+			$colorToPaint = imagecolorallocatealpha( $new_image, substr( $colors['left'], 0, 3 ) + 0, substr( $colors['left'], 3, 3 ) + 0, substr( $colors['left'], 6, 3 ) + 0, substr( $colors['left'], 9, 3 ) + 0 );
 
 			// Fill left color
 	        imagefilledrectangle( $new_image, 0, 0, $offsetLeft + 5, $size['height'], $colorToPaint );
@@ -73,7 +73,7 @@ class WP_Thumb_Background_Fill {
 
 		} elseif ( $current_size['height'] != $size['height'] ) {
 
-			$colorToPaint = imagecolorallocatealpha( $new_image, substr( $colors['top'], 0, 3 ), substr( $colors['top'], 3, 3 ), substr( $colors['top'], 6, 3 ), substr( $colors['left'], 9, 3 ) );
+			$colorToPaint = imagecolorallocatealpha( $new_image, substr( $colors['top'], 0, 3 ) + 0, substr( $colors['top'], 3, 3 ) + 0, substr( $colors['top'], 6, 3 ) + 0, substr( $colors['left'], 9, 3 ) + 0 );
 
 			// Fill top color
 	        imagefilledrectangle( $new_image, 0, 0, $size['width'], $offsetTop + 5, $colorToPaint );
